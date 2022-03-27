@@ -1,0 +1,30 @@
+server:
+  port: 8888
+  context-path: /sentinel
+spring:
+  application:
+    name: sentinel
+  main:
+    allow-circular-references: true
+  cloud:
+    sentinel:
+      transport:
+        #连接sentinel的dashboard
+        dashboard: 127.0.0.1:8080
+        #client-ip: 192.168.0.9:9000
+        port: 8719 #注意这里的端口默认是8719  如果8719被占用会自动+1 无需当心
+        #eager: true
+nacos:
+  discovery:
+    server-addr: 127.0.0.1:8848
+  config:
+    server-addr: 127.0.0.1:8848
+#  config:
+#    server-addr: 127.0.0.1:8848
+management:
+  endpoint:
+    web:
+      exposure:
+        include: '*'
+    health:
+      show-details: always
