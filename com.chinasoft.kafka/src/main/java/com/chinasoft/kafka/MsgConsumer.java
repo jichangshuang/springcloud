@@ -1,4 +1,4 @@
-package com.example.demo.kafka;
+package com.chinasoft.kafka;
 
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecord;

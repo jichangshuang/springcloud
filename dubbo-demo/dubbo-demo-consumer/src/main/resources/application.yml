@@ -1,0 +1,10 @@
+server:
+  port: 9999
+dubbo:
+  application:
+    name: dubbo-demo-consumer #???
+  registry:
+    address: zookeeper://127.0.0.1:2181
+    protocol:
+      name: dubbo
+      port: 20889
